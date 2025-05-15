@@ -1,0 +1,304 @@
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #000;
+	;
+	overflow: hidden;
+}
+
+table {
+	width: 100%;
+	display: table;
+	border-collapse: collapse;
+	font-size: 14px;
+	padding: 2px;
+	border: 0.1px solid #9b9999;
+}
+
+tr {
+	display: table-row;
+}
+
+td,
+th {
+	display: table-cell;
+	border: 0.1px solid #9b9999;
+	margin: 0;
+
+	vertical-align: top;
+	text-align: left;
+}
+
+th {
+	font-weight: bold;
+}
+
+p {
+	margin: 2px;
+}
+
+.mainstudentsessionreport {
+	margin: 0px;
+	overflow: hidden;
+	max-width: auto;
+	margin: 0px auto;
+	margin-bottom: 0px;
+	background-size: 100% 100%;
+}
+
+.studentsession-headers {
+
+	overflow: hidden;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
+.studentsession-logo {
+
+	text-align: center;
+	/* display: inline; */
+	/* width:100px;
+	height: 130px; */
+}
+
+.studentsession-headers img {
+	width: 60px;
+	height: 60px;
+}
+
+.school-name {
+	/*  float: center; */
+	text-align: center;
+}
+
+.school-name h2 {
+	/*  padding-left: 20px;
+    padding-top: 15px; */
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 5px;
+}
+
+.studentsession-infos {
+	width: 100%;
+	overflow: hidden;
+}
+
+.studentsession-infos h3 {
+	padding: 2px 0px;
+	margin: 0px;
+	font-size: 18px;
+}
+
+.studentsession-infos p {
+	margin-bottom: 2px;
+}
+
+.school-address {
+	float: left;
+	width: 40%;
+}
+
+.school-address h4 {
+	margin: 3px;
+	font-size: 18px;
+}
+
+.student-profile {
+	float: left;
+	width: 40%;
+}
+
+.student-profile h4 {
+	margin: 3px;
+	font-size: 18px;
+}
+
+.student-profile p {
+	margin-bottom: 2px;
+}
+
+.student-profile-img {
+	float: left;
+	width: 19.9%;
+	text-align: right;
+}
+
+.student-profile-img img {
+	border: 1px solid #9b9999;
+	margin-top: 5px;
+}
+
+.studentsession-contents {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+.studentsession-contents h4 {
+	font-size: 18px;
+	margin: 5px;
+}
+
+
+
+.studentsession-contents table {
+	width: 100%;
+}
+
+.studentsession-contents table tr,
+.studentsession-contents table td,
+.studentsession-contents table th {
+	padding-left: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	font-size: 13px;
+	/*  text-align: center; */
+
+}
+
+.contents {
+	font-size: 14px;
+}
+
+.profileimg {
+	border: 1px solid #9b9999;
+	width: 130px;
+	height: 130px;
+}
+
+.notfound {
+	padding: 15px 0px;
+	text-align: center;
+	border: 1px solid #9b9999;
+	font-weight: bold;
+	font-size: 18px
+}
+
+#sign {
+	display: table-cell;
+	border: 1px solid white;
+	margin: 0;
+	text-align: left;
+}
+
+#session {
+	text-align: right;
+	display: table-cell;
+	border: 1px solid white;
+	border-bottom: #9b9999;
+
+}
+
+#semester {
+	text-align: left;
+	display: table-cell;
+	border: 1px solid white;
+	border-bottom: #9b9999;
+
+}
+
+.name {
+	font-size: 14px
+}
+
+.collno {
+	font-size: 18px
+}
+
+.course {
+	font-size: 18px
+}
+
+.note {
+	margin-top: 10px;
+	padding: 10px 0px 0px 0px;
+	font-size: 12px;
+}
+
+#bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.bg {
+	position: absolute;
+	margin: 100px;
+	padding-top: 100px;
+	height: 700px;
+	opacity: 0.09;
+	background-size: cover;
+	z-index: -1;
+}
+
+.Row {
+	display: table;
+	width: 100%;
+	/*Optional*/
+	table-layout: fixed;
+	/*Optional*/
+	border-spacing: 10px;
+	/*Optional*/
+}
+
+.Column {
+	display: table-cell;
+	/* background-color: red; */
+	/*Optional*/
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.row {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#span01 {
+	display: inline-block;
+}
+
+#span02 {
+	display: inline-block;
+}
+
+.float-left {
+	float: left;
+	width: 300px;
+	/* or 33% for equal width independent of parent width */
+}
+
+.diidol {
+	font-size: 8px;
+	margin-left: 600px;
+
+	position: fixed;
+	overflow: hidden;
+}
+
+#pageFooter {
+	display: table-footer-group;
+}
+
+#pageFooter:after {
+	counter-increment: page;
+	content: counter(page);
+}

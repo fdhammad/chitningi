@@ -1,0 +1,132 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Courses extends CI_Controller
+{
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->database();
+		$this->load->library('session');
+		/*cache control*/
+		$this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
+		$this->output->set_header('Pragma: no-cache');
+		$this->user_model->check_session_data('admin');
+	}
+
+
+	function index()
+	{
+		if ($this->session->userdata('admin_login') != true) {
+			redirect(site_url('staff/login'), 'refresh');
+		}
+		// CHECK ACCESS PERMISSION
+		check_permission('courses');
+
+		$page_data['page_name'] = "courses";
+		$course_result = $this->course_model->get();
+		$page_data['courselist'] = $course_result;
+		$school_result = $this->school_model->get();
+		$page_data['schoollist'] = $school_result;
+		$page_data['page_title'] = site_phrase('courses');
+		$this->load->view('admin/index', $page_data);
+	}
+
+	function add()
+	{
+		$data = array(
+			'name' => html_escape($this->input->post('name')),
+			'code' => html_escape($this->input->post('code')),
+			'year' => html_escape($this->input->post('year')),
+			'school_id' => html_escape($this->input->post('school_id')),
+			'department_id' => html_escape($this->input->post('department_id'))
+		);
+		$result = $this->course_model->add($data);
+		if ($result) {
+			$response = array(
+				'status' => true,
+				'notification' => 'Success'
+			);
+		} else {
+			$response = array(
+				'status' => false,
+				'notification' => 'Error'
+			);
+		}
+		echo json_encode($response);
+	}
+	function get_by_id()
+	{
+		$id = $this->input->post('id');
+
+		$data = $this->course_model->get_by_id($id);
+
+		$arr = array('success' => false, 'data' => '');
+		if ($data) {
+			$arr = array('success' => true, 'data' => $data);
+		}
+		echo json_encode($arr);
+	}
+	public function update()
+	{
+		//$userdata = $this->customlib->getUserData();
+		$modal_id = $this->input->post('modal_id');
+		$modal_school_id = $this->input->post('modal_school_id');
+		$modal_department_id = $this->input->post('modal_department_id');
+		$modal_course = $this->input->post('modal_name');
+		$modal_code = $this->input->post('modal_code');
+		$modal_year = $this->input->post('modal_year');
+		//$status = $this->input->post('status');
+		//$staff_id = $userdata['id'];
+		//$subject_id = $this->input->post('subject_id');
+		//$unit = $this->exams_model->getSubjectid($id)->unit;
+		//$coll_call = substr($std_id, 4, 2);
+
+		$data = array(
+			'id' => $modal_id,
+			'name' => $modal_course,
+			'code' => $modal_code,
+			'year' => $modal_year,
+			'school_id' => $modal_school_id,
+			'department_id' => $modal_department_id,
+
+		);
+
+		$status = false;
+
+		//$id = $this->input->post('id');
+
+		if ($modal_course) {
+			$update = $this->course_model->add($data);
+			$status = true;
+		}
+		$data = $this->course_model->get_by_id($modal_id);
+		echo json_encode(array("status" => $status, 'data' => $data));
+	}
+
+	function delete($id)
+	{
+		//$id = $this->input->post('id'); // get the post data
+		$delete = $this->course_model->delete($id);
+		if ($delete) {
+			echo true;
+			//$this->session->set_flashdata('msg', '<div student="alert alert-success text-left">Course Added Successfully</div>');
+		} else {
+			echo false;
+		}
+	}
+
+	function getBySchool()
+	{
+		$school_id = $this->input->get('school_id');
+		$data = $this->crud_model->getDepartmentsBySchool($school_id);
+		echo json_encode($data);
+	}
+	function getByDept()
+	{
+		$dept_id = $this->input->get('department_id');
+		$data = $this->crud_model->getCoursesByDept($dept_id);
+		echo json_encode($data);
+	}
+}

@@ -1,0 +1,97 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 86% "Times New Roman", Times, serif;
+	/*helvetica, verdana, "Trebuchet MS", tahoma, arial, sans-serif;*/
+	line-height: 2em;
+	/*background : #fff url(../images/bg.gif) repeat-x;*/
+	color: #333;
+	background-position: 50% 0;
+
+}
+
+/*WRAP*/
+#container {
+	width: 1100px;
+	margin: 0 auto;
+	color: #333;
+}
+
+/*TOP BAR*/
+#top {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	display: table;
+	border-collapse: collapse;
+	margin: 15px 0;
+	padding: 0;
+	border: 1px solid;
+	font-size: 100%;
+}
+
+tr {
+	display: table-row;
+}
+
+th,
+td {
+	display: table-cell;
+	border: 1px solid;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	vertical-align: top;
+	text-align: left;
+}
+
+th {
+	text-align: center;
+	font-weight: bold;
+}
+
+.btn {
+	background: #192666;
+	color: #fff;
+	border: 1px solid;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
+	position: relative;
+}
+
+.btn:hover {
+	background: #7e7e7e;
+}
+
+fieldset {
+	width: auto;
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+
+legend {
+	color: #f00;
+}
+
+p {
+	margin: 10px;
+	text-align: left;
+	line-height: 20px;
+}
+
+#sign {
+	display: table-cell;
+	border: 1px solid #ffff;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	vertical-align: top;
+	text-align: left;
+}

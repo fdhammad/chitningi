@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 86% "Times New Roman", Times, serif;
+	/*helvetica, verdana, "Trebuchet MS", tahoma, arial, sans-serif;*/
+	line-height: 2em;
+	/*background : #fff url(../images/bg.gif) repeat-x;*/
+	color: #333;
+	background-position: 50% 0;
+}
+
+/*WRAP*/
+#container {
+	width: 1100px;
+	margin: 0 auto;
+	color: #333;
+}
+
+/*TOP BAR*/
+#top {
+	margin: 0;
+	padding: 0;
+}
+
+#top h2 {
+	text-align: center;
+	text-transform: none;
+	letter-spacing: 5px;
+	font-size: 90%;
+	padding: 8px 0;
+	margin: 0;
+	background: #fff;
+	/*#7e7e7e;*/
+	color: #29166f;
+	/*#aaa; */
+}
+
+/*BANNER*/
+
+#content {
+	float: right;
+	width: 850px;
+
+	position: relative;
+	text-align: center;
+
+	padding: 0 0 20px 0;
+}
+
+
+/*FOOTER*/
+#footer {
+	clear: both;
+	font-size: 0.9em;
+	color: #000;
+	background: #060;
+	/*#710069;*/
+	border-top: 1px solid #eee;
+	margin: 0;
+	text-align: center;
+	padding-left: 180px;
+}
+
+/*TYPOGRAPHY*/
+
+h4 {
+	font: 110% "Times New Roman", Times, serif;
+	border-bottom: 3px solid #29166f;
+	color: #29166f;
+	/*#710069;*/
+	background: inherit;
+	margin: 5px 0 5px 10px;
+	padding: 2px 0;
+}
+
+p {
+	margin: 5px;
+	text-align: left;
+}
+
+a img {
+	border: 0;
+}
+
+table {
+	display: table;
+	border-collapse: collapse;
+	margin: 15px 0;
+	padding: 0;
+	border: 1px solid #0b5394;
+	font-size: 100%;
+}
+
+tr {
+	display: table-row;
+}
+
+th,
+td {
+	display: table-cell;
+	border: 1px solid #0b5394;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	vertical-align: top;
+	text-align: left;
+}
+
+th {
+
+	text-align: center;
+
+	font-weight: bold;
+}
+
+.row {
+	display: table-cell;
+	vertical-align: top;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+
+
+p {
+	margin: 10px;
+	text-align: left;
+	line-height: 20px;
+}
+
+#sign {
+	display: table-cell;
+	border: 1px solid #ffff;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: left;
+}
