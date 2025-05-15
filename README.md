@@ -1,0 +1,2 @@
+# chitningi
+College Management System
